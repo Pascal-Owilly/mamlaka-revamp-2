@@ -100,50 +100,37 @@ export const footerLinks = [
     title: "Useful Links",
     links: [
       {
-        name: "Content",
-        link: "https://www.hoobank.com/content/",
+        name: "Terms of Service",
+        link: "/terms-of-service", // Internal link for Terms of Service
       },
       {
-        name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
+        name: "Privacy Policy",
+        link: "/privacy-policy", // Internal link for Privacy Policy
       },
       {
-        name: "Create",
-        link: "https://www.hoobank.com/create/",
+        name: "Return Policy",
+        link: "/return-policy", // Internal link for Return Policy
       },
       {
-        name: "Explore",
-        link: "https://www.hoobank.com/explore/",
-      },
-      {
-        name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
+        name: "Compliance Certificate",
+        link: "/compliance-certificate", // Internal link for Compliance Certificate
       },
     ],
   },
+
   {
-    title: "Community",
+    title: "Company",
     links: [
       {
-        name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
+        name: "About Us",
+        link: "",
       },
-      {
-        name: "Partners",
-        link: "https://www.hoobank.com/partners/",
-      },
-      {
-        name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
-      },
+ 
       {
         name: "Blog",
-        link: "https://www.hoobank.com/blog/",
+        link: "",
       },
-      {
-        name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
-      },
+
     ],
   },
   {
@@ -151,22 +138,18 @@ export const footerLinks = [
     links: [
       {
         name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
+        link: "",
       },
       {
-        name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
+        name: "FAQs",
+        link: "",
       },
     ],
   },
 ];
 
 export const socialMedia = [
-  {
-    id: "social-media-1",
-    icon: instagram,
-    link: "https://www.instagram.com/",
-  },
+
   {
     id: "social-media-2",
     icon: facebook,

@@ -12,7 +12,7 @@ const Footer = () => (
           className="w-[266px] h-[72.14px] object-contain"
         />
         <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
-          A new way to make the  Finance trading within africa easy, reliable and secure.
+          A new way to make the Finance trading within Africa easy, reliable, and secure.
         </p>
       </div>
 
@@ -30,7 +30,9 @@ const Footer = () => (
                     index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
                   }`}
                 >
-                  {link.name}
+                  <a href={link.link || "#"} target="_blank" rel="noopener noreferrer">
+                    {link.name}
+                  </a>
                 </li>
               ))}
             </ul>
