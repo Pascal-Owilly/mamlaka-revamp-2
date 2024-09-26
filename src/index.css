@@ -18,8 +18,39 @@
   scroll-behavior: smooth;
 }
 
+/* App.css or index.css */
+body {
+  margin: 0;
+  transition: background-color 0.5s ease, color 0.5s ease !important;
+}
+
+/* Optionally, you can add a class for other elements as needed */
+.transition {
+  transition: all 0.5s ease; /* Applies to all properties */
+}
+
+
+.small-image {
+  width: 100px; /* Adjust as necessary */
+  height: 50px; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+
+
+h2{
+  color:  #111;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+h4{
+  color:  #222b5b;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
 .text-gradient {
-  background: radial-gradient(
+  background: radial-gradient(  
     64.18% 64.18% at 71.16% 35.69%,
     #ed9005 0.89%,
     #da6506 17.23%,
@@ -27,6 +58,20 @@
     #f8a305 55.12%,
     #c8b36e 71.54%,
     #d76508 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.text-gradient-2 {
+  background: radial-gradient(  
+    64.18% 64.18% at 71.16% 35.69%,
+    #222b5b 0.89%,
+    #6a2b89 17.23%,
+    #852890 42.04%,
+    #402a6f 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -107,10 +152,11 @@
   }
 }
 
-.feature-card:hover {
-  background: var(--black-gradient);
+/* .feature-card:hover {
+  background: #852890;
+  color: white;
   box-shadow: var(--card-shadow);
-}
+} */
 
 .feedback-container .feedback-card:last-child {
   margin-right: 0px;
@@ -137,4 +183,26 @@
 .white__gradient {
   background: rgba(219, 112, 5, 0.6);
   filter: blur(750px);
+}
+
+/* Get started arrow */
+
+.arrow {
+  display: inline-block;
+  position: relative;
+  font-weight: bold; /* Make the arrow bold */
+  font-size: 24px; /* Increase the size */
+  animation: slideArrow 2s ease-in-out infinite;
+}
+
+@keyframes slideArrow {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 15px; /* Increase distance for longer movement */
+  }
+  100% {
+    left: 0;
+  }
 }

@@ -1,31 +1,58 @@
-import { apple, bill, google } from "../assets";
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carousel, Container, Row, Col } from 'react-bootstrap';
 import styles, { layout } from "../style";
 
 const Billing = () => (
-  <section id="product" className={layout.sectionReverse}>
-    <div className={layout.sectionImgReverse}>
-      <img src={bill} alt="billing" className="w-[100%] h-[100%] relative z-[5]" />
+  <>
+    {/* Section 1: Carousel of Payment Plugins */}
+    <section id="product" className={`${layout.sectionReverse} py-5`}>
+      <Container>
+        <Row className="align-items-center">
+          {/* Carousel Column */}
+          <Col md={6}>
+            <h2 className={styles.heading2}>
+              Available Payment Plugins
+            </h2>
+            <Carousel indicators={false} controls={true}>
+              {/* Create multiple slides, each containing 6 placeholders */}
+              {[...Array(3)].map((_, slideIndex) => (
+                <Carousel.Item key={slideIndex}>
+                  <Row className="justify-content-center">
+                    {/* Render 6 small images in a row, each occupying col-2 */}
+                    {[...Array(6)].map((_, imgIndex) => (
+                      <Col key={imgIndex} className="col-2 d-flex justify-content-center align-items-center p-2">
+                        <img
+                          src="https://via.placeholder.com/100x100?text=Plugin"
+                          alt={`Plugin ${slideIndex * 6 + imgIndex + 1}`}
+                          style={{ width: '60px', height: '60px' }}
+                          className="img-fluid"
+                        />
+                      </Col>
+                    ))}
+                  </Row>
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          </Col>
 
-      {/* gradient start */}
-      <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient" />
-      <div className="absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full pink__gradient" />
-      {/* gradient end */}
-    </div>
+          {/* Map Column */}
+          <Col md={6} className="text-center">
+            <p className='text-dark text-muted'
+            
+            >
+              Available in Different Currencies
+            </p>
 
-    <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2}>
-        Easily control your <br className="sm:block hidden" /> Payment Processing
-      </h2>
-      <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-      Optimize your financial transactions with our reliable payment processing solutions. Offer your customers diverse payment options, including cards, mobile payments, USSD, and bank transfers, to enhance convenience and grow your business
-      </p>
-
-      <div className="flex flex-row flex-wrap sm:mt-10 mt-6">
-        <img src={apple} alt="google_play" className="w-[128.86px] h-[42.05px] object-contain mr-5 cursor-pointer" />
-        <img src={google} alt="google_play" className="w-[144.17px] h-[43.08px] object-contain cursor-pointer" />
-      </div>
-    </div>
-  </section>
+            {/* Placeholder for Map of Africa */}
+            <div className="mt-5">
+              <img src="https://via.placeholder.com/600x400?text=Map+of+Africa" alt="Map of Africa" className="img-fluid mx-auto d-block" />
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  </>
 );
 
 export default Billing;

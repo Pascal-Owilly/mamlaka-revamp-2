@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "../style";
-import heroimg from "../assets/heroimg.jpeg";
-import GetStarted from "./GetStarted";
+import heroGif from "../assets/map_1.gif"; // Importing the GIF
 
 const Hero = () => {
   useEffect(() => {
@@ -69,61 +68,49 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className={`relative flex md:flex-row flex-col ${styles.paddingY}`}
-    style={{ 
-      backgroundImage: `url(${heroimg})`, 
-      backgroundSize: 'cover', // Change to contain
-      backgroundRepeat: 'no-repeat', // Prevents repeating the image
-      backgroundPosition: 'center', // Centers the image
-    }}
+    <section
+      id="home"
+      className={`relative flex md:flex-row flex-col ${styles.paddingY}`}
+      style={{
+        position: "relative",
+        overflow: "hidden",
+        backgroundImage: `url(${heroGif})`, // Set GIF as background image
+        backgroundSize: "cover", // Make sure the GIF covers the entire section
+        backgroundPosition: "right", // align bg to the right
+        zIndex: '2',
+      }}
     >
-      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
+      <div className={`flex-2 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
         <div className="flex flex-row justify-between items-center w-full">
-        <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[px] text-white ss:leading-[100.8px] leading-[48px]">
-            The Africa Trade<br className="sm:block hidden" />{" "}
-            <span className="text-gradient"> Payment Network</span>{" "}
+          <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] ss:leading-[100.8px] leading-[48px]">
+            The Africa Trade
+            <br className="sm:block hidden" />{" "}
+            <span className="text-gradient-2">Payment </span>{" "}
+            <span>Network</span>
           </h1>
-          <div className="ss:flex hidden md:mr-4 mr-0">
-            <GetStarted />
-          </div>
         </div>
 
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
           MHS empowers Africa's trade finance with secure, tech-driven digital services for growth.
         </p>
-      </div>
 
-      {/* Background Image */}
-      <div className={`flex-1 relative ${styles.flexCenter}`}>
-        <div id="particles-js" className="absolute inset-0 z-[-1]" />
-        <img src={heroimg} alt="Hero Background" className="w-full h-full object-cover relative z-[-1]" />
-        
-        {/* Atom SVG positioned on top */}
-        <div className="absolute top-0 left-0">
-          <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style={{ stopColor: '#00f', stopOpacity: 1 }} />
-                <stop offset="100%" style={{ stopColor: '#0ff', stopOpacity: 1 }} />
-              </linearGradient>
-            </defs>
-            <circle cx="100" cy="100" r="10" fill="url(#text-gradient)" />
-            <ellipse cx="100" cy="100" rx="60" ry="20" fill="none" stroke="url(#text-gradient)" strokeWidth="2">
-              <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="6s" repeatCount="indefinite" />
-            </ellipse>
-            <ellipse cx="100" cy="100" rx="40" ry="60" fill="none" stroke="url(#text-gradient)" strokeWidth="2">
-              <animateTransform attributeName="transform" type="rotate" from="360 100 100" to="0 100 100" dur="6s" repeatCount="indefinite" />
-            </ellipse>
-            <circle cx="160" cy="100" r="5" fill="url(#text-gradient)">
-              <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="6s" repeatCount="indefinite" />
-            </circle>
-          </svg>
+        {/* Get Started Button with sliding arrow */}
+        <div className={`${styles.flexCenter} mt-5`}>
+          <button
+            className="py-4 px-6 text-white rounded-full flex items-center justify-center"
+            style={{ background: "#852890" }}
+          >
+            Get Started
+            <span className="ml-3 arrow">→</span> {/* Forward arrow */}
+          </button>
         </div>
       </div>
 
-      <div className={`ss:hidden ${styles.flexCenter}`}>
-        <GetStarted />
+      {/* Particle Effect */}
+      <div className={`flex-1 relative ${styles.flexCenter}`}>
+        <div id="particles-js" className="absolute inset-0 z-[-1]" />
       </div>
+
     </section>
   );
 };

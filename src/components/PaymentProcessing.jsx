@@ -3,53 +3,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from "../style";
 
 const CardDeal = () => (
-  <div className="container my-5" style={{ padding: '10px' }}>
-
+  <div className="jumbotron my-5" style={{ background: '#6a2b89', color: 'white', padding: '10px', borderRadius: '10px', margin: '20px' }}>
     <div className="row">
-      {/* Description Section */}
-      <div className="col-12 col-md-8 mb-4 d-flex justify-content-left">
-        <div
-          style={{
-            background: '#222b5b', // Card background color
-            color: 'white', // Change text color to ensure readability
-            padding: '50px',
-            borderRadius: '10px',
-            width: '100%', // Ensure it takes the full width of the parent
-            maxWidth: '' // Optional: limit max width for better layout
-          }}
-        >
- <h2 className={`${styles.heading2} text-white`}>
-  Tap into our embedded trade payment options
-</h2>
-
-<p
-  className="mt-2 font-bold text-lg text-white p-2 rounded shadow-md"
-  style={{ backgroundColor: "#852890" }}
->
-  MoMo & Cards Channel
-</p>
-
-        </div>
-      </div>
-
       {/* Compass Image Section */}
-      <div className="col-12 col-md-4 d-flex justify-content-left align-items-left">
+      <div className="col-12 col-md-5 d-flex justify-content-center align-items-center">
         <div className="position-relative" style={{ width: "450px", height: "450px" }}>
-          {/* Circular Path SVG */}
+          {/* Symmetrical Dotted Circular Path SVG */}
           <div className="position-absolute w-100 h-100">
             <svg viewBox="0 0 100 100" className="w-100 h-100">
-              {/* Circular Path */}
+              {/* Dotted Circle Path */}
               <defs>
                 <marker
                   id="arrow"
-                  markerWidth="4"
-                  markerHeight="4"
-                  refX="2"
+                  markerWidth="6"
+                  markerHeight="6"
+                  refX="5"
                   refY="2"
                   orient="auto"
-                  markerUnits="strokeWidth"
                 >
-                  <path d="M0,0 L4,2 L0,4 L1,2 Z" fill="#222b5b" />
+                  <path d="M0,0 L0,4 L6,2 Z" fill="#222b5b" />
                 </marker>
               </defs>
               <path
@@ -57,30 +29,30 @@ const CardDeal = () => (
                    a 40,40 0 1,1 0,80
                    a 40,40 0 1,1 0,-80"
                 fill="transparent"
-                stroke="#222b5b"
+                stroke="#fff"
+                strokeDasharray="2,2"
                 strokeWidth="0.5"
                 markerEnd="url(#arrow)"
-                markerMid="url(#arrow)"
               />
             </svg>
           </div>
 
-          {/* Top Image */}
+          {/* Top Image Placeholder */}
           <div
             className="position-absolute bg-white border border-dark rounded-circle d-flex align-items-center justify-content-center"
             style={{
               width: "90px",
               height: "90px",
               top: "10%",
-              left: "45%",
+              left: "50%",
               transform: "translate(-50%, -50%)",
             }}
           >
-            <img src="https://via.placeholder.com/90" alt="Top Image" className="w-100 h-100 rounded-circle" />
+            <img src='https://via.placeholder.com/90' alt="Top Image" className="w-100 h-100 rounded-circle" />
           </div>
 
           {/* Center Text */}
-          <div
+          {/* <div
             className="position-absolute bg-white border border-dark rounded-circle d-flex align-items-center justify-content-center"
             style={{
               width: "120px",
@@ -90,22 +62,7 @@ const CardDeal = () => (
               transform: "translate(-50%, -50%)",
             }}
           >
-            <h4 style={{ padding: '30px' }}>Merchant Services</h4>
-          </div>
-
-          {/* Top-Right Image */}
-          <div
-            className="position-absolute bg-white border border-dark rounded-circle d-flex align-items-center justify-content-center"
-            style={{
-              width: "90px",
-              height: "90px",
-              top: "30%",
-              left: "85%",
-              transform: "translate(-50%, -50%)",
-            }}
-          >
-            <img src="https://via.placeholder.com/90" alt="Top Right Image" className="w-100 h-100 rounded-circle" />
-          </div>
+          </div> */}
 
           {/* Bottom-Right Image */}
           <div
@@ -118,7 +75,7 @@ const CardDeal = () => (
               transform: "translate(50%, 50%)",
             }}
           >
-            <img src="https://via.placeholder.com/90" alt="Bottom Right Image" className="w-100 h-100 rounded-circle" />
+            <img src='https://via.placeholder.com/90' alt="Bottom Right Image" className="w-100 h-100 rounded-circle" />
           </div>
 
           {/* Bottom-Left Image */}
@@ -132,7 +89,7 @@ const CardDeal = () => (
               transform: "translate(-50%, 50%)",
             }}
           >
-            <img src="https://via.placeholder.com/90" alt="Bottom Left Image" className="w-100 h-100 rounded-circle" />
+            <img src='https://via.placeholder.com/90' alt="Bottom Left Image" className="w-100 h-100 rounded-circle" />
           </div>
 
           {/* Top-Left Image */}
@@ -142,11 +99,24 @@ const CardDeal = () => (
               width: "90px",
               height: "90px",
               top: "40%",
-              left: "13%",
+              left: "15%",
               transform: "translate(-50%, -50%)",
             }}
           >
-            <img src="https://via.placeholder.com/90" alt="Top Left Image" className="w-100 h-100 rounded-circle" />
+            <img src='https://via.placeholder.com/90' alt="Top Left Image" className="w-100 h-100 rounded-circle" />
+          </div>
+        </div>
+      </div>
+
+      {/* Description Section Inside a Card */}
+      <div className="col-12 col-md-7 d-flex justify-content-center align-items-center">
+        <div className="card p-4" style={{ backgroundColor: '#ccc', borderRadius: '10px' }}>
+          <div className="card-body text-center">
+            <h3 className={styles.heading2}>Payment Processing</h3>
+            <p className="mt-3">
+              MHS offers secure payment processing with credit cards, mobile money, and bank transfers, <br />
+              ensuring smooth PCI DSS/GDPR compliant transactions with real-time tracking.
+            </p>
           </div>
         </div>
       </div>

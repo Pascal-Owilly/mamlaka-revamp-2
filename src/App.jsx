@@ -16,11 +16,19 @@ import {
   ReturnPolicy,
   ComplianceCertificate,
   FAQ,
+  PaymentProcessing,
+  MultiplePaymentOptions,
+  OnboardingProcess,
+  Solutions,
+  AboutUs,
+  ContactUs,
+  DownloadApps,
 } from "./components";
 
 const App = () => (
+
   <Router>
-    <div className="bg-primary w-full overflow-hidden">
+    <div className="bg-white w-full overflow-hidden">
       {/* Common Navbar */}
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
@@ -29,7 +37,7 @@ const App = () => (
       </div>
 
       {/* Page Content */}
-      <div className={`bg-primary ${styles.flexStart}`}>
+      <div className={`bg-white ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <Routes>
             {/* Home Page - Includes all sections */}
@@ -40,28 +48,36 @@ const App = () => (
                   <Hero />
                   <Stats />
                   <Business />
-                  <Billing />
-                  <CardDeal />
-                  <Testimonials />
                   <Clients />
-                  <CTA />
+                  <CardDeal />
+                  <Billing />
+                  <PaymentProcessing />
+                  <MultiplePaymentOptions />
+                  <OnboardingProcess />
+                  <DownloadApps />
+                  {/* <CTA /> */}
+                  {/* <Testimonials /> */}
                 </>
               }
             />
 
-            {/* Other Pages - Only show header and footer */}
             {/* <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/return-policy" element={<ReturnPolicy />} />
             <Route path="/compliance-certificate" element={<ComplianceCertificate />} />
             <Route path="/faqs" element={<FAQ />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+
+
 
           </Routes>
         </div>
       </div>
 
       {/* Common Footer */}
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`bg-white ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Footer />
         </div>

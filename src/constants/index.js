@@ -2,31 +2,32 @@ import { people01, people02, people03, facebook, instagram, linkedin, twitter, s
 
 export const navLinks = [
   {
-    id: "home",
-    title: "Home",
+    title: "Solutions",
+    url: "/solutions", // Link to the products page
   },
   {
-    id: "features",
-    title: "Features",
+    title: "About Us",
+    url: "/about-us", // Link to the company page
   },
   {
-    id: "product",
-    title: "Product",
+    title: "FAQs",
+    url: "/faqs", // Link to the FAQs page
   },
   {
-    id: "clients",
-    title: "Clients",
+    title: "Connect with us",
+    url: "/contact-us", // Link to the contact page
   },
 ];
 
+
 export const features = [
-  {
-    id: "feature-1",
-    icon: star,
-    title: "Stellar Blockchain Technology",
-    content:
-      "Our blockchain solutions offer security, efficiency, and transparency for our seamless business growth.",
-  },
+  // {
+  //   id: "feature-1",
+  //   icon: star,
+  //   title: "Stellar Blockchain Technology",
+  //   content:
+  //     "Our blockchain solutions offer security, efficiency, and transparency for our seamless business growth.",
+  // },
   {
     id: "feature-2",
     icon: shield,
@@ -80,17 +81,17 @@ export const feedback = [
 export const stats = [
   {
     id: "stats-1",
-    title: "Active User Base",
+    title: "Global Reach",
    
   },
   {
     id: "stats-2",
-    title: "Trusted by Companies",
+    title: "20 Countries",
    
   },
   {
     id: "stats-3",
-    title: " Secure Transactions",
+    title: " 15 Currencies",
    
   },
 ];
