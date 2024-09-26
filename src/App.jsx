@@ -11,7 +11,7 @@ import {
   Stats,
   Testimonials,
   Hero,
-  // PrivacyPolicy,
+  PrivacyP,
   TermsOfService,
   ReturnPolicy,
   ComplianceCertificate,
@@ -61,7 +61,7 @@ const App = () => (
               }
             />
 
-            {/* <Route path="/privacy-policy" element={<PrivacyPolicy />} /> */}
+            <Route path="/privacy-policy" element={<PrivacyP />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/return-policy" element={<ReturnPolicy />} />
             <Route path="/compliance-certificate" element={<ComplianceCertificate />} />

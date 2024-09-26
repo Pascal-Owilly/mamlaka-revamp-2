@@ -124,49 +124,52 @@ export const footerLinks = [
     links: [
       {
         name: "About Us",
-        link: "",
+        link: "/about-us",
       },
  
-      {
-        name: "Blog",
-        link: "",
-      },
+      // {
+      //   name: "Blog",
+      //   link: "",
+      // },
 
     ],
   },
   {
     title: "Partner",
     links: [
-      {
-        name: "Our Partner",
-        link: "",
-      },
+      // {
+      //   name: "Our Partner",
+      //   link: "",
+      // },
       {
         name: "FAQs",
-        link: "",
+        link: "/faq",
       },
     ],
   },
 ];
 
 export const socialMedia = [
-
   {
     id: "social-media-2",
     icon: facebook,
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/profile.php?id=61550738654440&_rdc=1&_rdr/",
+    color: "#3b5998", // Facebook color
+  },
+  {
+    id: "social-media-4",
+    icon: linkedin,
+    link: "https://ke.linkedin.com/company/mamlaka-hub-and-spoke",
+    color: "#0077B5", // LinkedIn color
   },
   {
     id: "social-media-3",
     icon: twitter,
     link: "https://www.twitter.com/",
-  },
-  {
-    id: "social-media-4",
-    icon: linkedin,
-    link: "https://www.linkedin.com/",
+    color: "#1DA1F2", // Twitter color
   },
 ];
+
 
 export const clients = [
   {

@@ -2,6 +2,8 @@ import styles, { layout } from "../style";
 
 const CardDeal = () => (
   <section className={layout.section}>
+    <div className="container">
+
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
         Terms of Service <br className="sm:block hidden" /> 
@@ -14,8 +16,7 @@ const CardDeal = () => (
         (the “Site”) and services provided.
       </p>
 
-      <div className={`${styles.paragraph} mt-5`}>
-        <h3>1. Scope of Agreement</h3>
+      <TermsSection title="1. Scope of Agreement">
         <p>
           1.1 These terms and conditions constitute a legally binding agreement (the “Agreement”) made between you, 
           personally or on behalf of an entity, and MHS, and govern your use of the Site and services.
@@ -33,20 +34,18 @@ const CardDeal = () => (
           1.4 The information provided on the Site is not intended for distribution in jurisdictions where such use would be contrary to law. 
           Users are responsible for compliance with local laws if applicable.
         </p>
-      </div>
+      </TermsSection>
 
-      <div className={`${styles.paragraph} mt-5`}>
-        <h3>2. MHS</h3>
+      <TermsSection title="2. MHS">
         <p>
           2.1 Mamlaka Hub & Spoke Ltd. is a private company incorporated in Kenya and regulated by the Central Bank of Kenya in accordance with authorization certificate no. NPS/29/31/2023.
         </p>
         <p>
           2.2 MHS processes Payment Transactions on behalf of Sellers. MHS is not a bank or other chartered depository institution.
         </p>
-      </div>
+      </TermsSection>
 
-      <div className={`${styles.paragraph} mt-5`}>
-        <h3>3. Using the Service</h3>
+      <TermsSection title="3. Using the Service">
         <p>
           3.1 The User does not need to register for an MHS account to use the Service and visit most areas of the Site. 
           However, to access restricted areas of the Site, the User will need to register and set up an account with MHS (the “Account”).
@@ -69,10 +68,9 @@ const CardDeal = () => (
           3.5 MHS retains the right to request additional documents and/or information regarding the User or transactions at any time. 
           MHS may request updates and confirmations of any information and documentation as frequently as needed to comply with the Central Bank of Kenya regulations.
         </p>
-      </div>
+      </TermsSection>
 
-      <div className={`${styles.paragraph} mt-5`}>
-        <h3>4. Termination of Account</h3>
+      <TermsSection title="4. Termination of Account">
         <p>
           4.1 MHS reserves the right, in its sole discretion, to suspend or terminate the Account or access to the Service, at any time, 
           with or without cause, with or without notice. Grounds for termination may include but are not limited to breach of these Terms.
@@ -80,10 +78,9 @@ const CardDeal = () => (
         <p>
           4.2 Upon termination, all rights and licenses granted to the User under these Terms shall immediately cease.
         </p>
-      </div>
+      </TermsSection>
 
-      <div className={`${styles.paragraph} mt-5`}>
-        <h3>5. Governing Law</h3>
+      <TermsSection title="5. Governing Law">
         <p>
           5.1 These Terms and the use of the Site and Service are governed by and construed in accordance with the laws of Kenya, 
           without regard to its conflict of law provisions.
@@ -91,13 +88,20 @@ const CardDeal = () => (
         <p>
           5.2 Any disputes arising out of these Terms or use of the Site and Service will be resolved in the courts located in Kenya.
         </p>
-      </div>
+      </TermsSection>
+    </div>
+      
     </div>
 
-    <div className={layout.sectionImg}>
-      {/* You can add any related image or leave it blank */}
-    </div>
   </section>
+);
+
+// Separate TermsSection component for better structure and reusability
+const TermsSection = ({ title, children }) => (
+  <div className={`${styles.paragraph} mt-5`}>
+    <h3 className={styles.heading3}>{title}</h3>
+    {children}
+  </div>
 );
 
 export default CardDeal;

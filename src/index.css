@@ -29,19 +29,67 @@ body {
   transition: all 0.5s ease; /* Applies to all properties */
 }
 
-
 .small-image {
   width: 100px; /* Adjust as necessary */
   height: 50px; /* Maintain aspect ratio */
   border-radius: 10px;
 }
 
+.section-content {
+  margin: 30px auto;
+  max-width: 800px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.sub-title {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-left: 4px solid #773697;
+  padding-left: 10px;
+}
+.text {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+ul.text {
+  list-style-type: none;
+  padding: 0;
+}
+ul.text li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+ul.text img {
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
 
 h2{
   color:  #111;
   letter-spacing: 2px;
   font-weight: 800;
 }
+
+.rounded-circle {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #773697; /* Example color for number */
+  background-color: rgba(119, 54, 151, 0.2); /* Light background color */
+}
+
 
 h4{
   color:  #222b5b;

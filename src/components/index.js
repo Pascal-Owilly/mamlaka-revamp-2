@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 import TermsOfService from "./TermsOfService";
-// import PrivacyPolicy from "./PrivacyPolicy";
+import PrivacyP from "./PrivacyP";
 import ReturnPolicy from "./ReturnPolicy";
 import ComplianceCertificate from "./ComplianceCertificate";
 import GlobalPayment from "./GlobalPayment";
@@ -35,7 +35,7 @@ export {
   Testimonials,
   Hero,
   TermsOfService,
-  // PrivacyPolicy,
+  PrivacyP,
   ReturnPolicy,
   ComplianceCertificate,
   GlobalPayment,
