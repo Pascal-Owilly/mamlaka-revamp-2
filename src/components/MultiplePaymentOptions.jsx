@@ -13,8 +13,9 @@ const CardDeal = () => (
         <div className="col-12 col-md-5 d-flex justify-content-center align-items-center">
           <div className="p-4">
             <div className="card-body text-center">
-              <h3 className={styles.heading2}>Multiple Payment Options</h3>
-              <p className="mt-3">
+            <h1 className="flex-1 font-bitter font-semibold ss:text-[48px] text-[30px] ss:leading-[100.8px] leading-[48px]">
+            Multiple Payment Options</h1>
+              <p className="mt-3 font-bitter">
                 We integrate with leading money transfer services across Africa, enabling your customers to pay via credit and debit cards, mobile money, and other transfer methods.
               </p>
             </div>

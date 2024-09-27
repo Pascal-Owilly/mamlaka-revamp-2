@@ -1,8 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../style";
 import heroGif from "../assets/map_1.gif"; // Importing the GIF
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Effect to check screen size and set `isMobile`
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize); // Listen for screen size changes
+
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     window.particlesJS("particles-js", {
       particles: {
@@ -74,35 +89,41 @@ const Hero = () => {
       style={{
         position: "relative",
         overflow: "hidden",
-        backgroundImage: `url(${heroGif})`, // Set GIF as background image
-        backgroundSize: "cover", // Make sure the GIF covers the entire section
-        backgroundPosition: "right", // align bg to the right
-        zIndex: '2',
+        backgroundImage: isMobile ? "none" : `url(${heroGif})`, // Conditionally render background image
+        backgroundSize: "cover", // Ensure the GIF covers the entire section
+        backgroundPosition: "right", // Align background to the right
+        zIndex: "2",
       }}
     >
       <div className={`flex-2 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
         <div className="flex flex-row justify-between items-center w-full">
-          <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] ss:leading-[100.8px] leading-[48px]">
+          <h1 className="flex-1 font-bitter font-semibold ss:text-[40px] text-[40px] ss:leading-[100.8px] leading-[40px]">
             The Africa Trade
-            <br className="sm:block hidden" />{" "}
+            <br className="" />{" "}
             <span className="text-gradient-2">Payment </span>{" "}
             <span>Network</span>
           </h1>
         </div>
 
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          MHS empowers Africa's trade finance with secure, tech-driven digital services for growth.
+        <p
+          className={`${styles.paragraph} max-w-[470px] mt-5`}
+          style={{ fontSize: "16px" }}
+        >
+          MHS empowers Africa's trade finance with secure, tech-driven digital
+          services for growth.
         </p>
 
         {/* Get Started Button with sliding arrow */}
         <div className={`${styles.flexCenter} mt-5`}>
-          <button
-            className="py-4 px-6 text-white rounded-full flex items-center justify-center"
-            style={{ background: "#852890" }}
-          >
-            Get Started
-            <span className="ml-3 arrow">→</span> {/* Forward arrow */}
-          </button>
+          <a href="/solutions">
+            <button
+              className=" text-white rounded-full flex items-center justify-center font-bitter"
+              style={{ background: "#852890", padding: "10px", paddingLeft: "20px" }}
+            >
+              Discover our capabilities
+              <span className="ml-3 arrow">→</span> {/* Forward arrow */}
+            </button>
+          </a>
         </div>
       </div>
 
@@ -110,7 +131,6 @@ const Hero = () => {
       <div className={`flex-1 relative ${styles.flexCenter}`}>
         <div id="particles-js" className="absolute inset-0 z-[-1]" />
       </div>
-
     </section>
   );
 };

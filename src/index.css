@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +13,93 @@
     #f58606 91.61%
   );
   --card-shadow: 0px 20px 100px -10px rgba(249, 121, 10, 0.1);
+}
+
+/* bitter font */
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900 */
+
+/* PrivacyPolicy.module.css */
+
+.privacyPage {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  padding: 0;
+  margin: 0;
+}
+
+.heroSection {
+  background: linear-gradient(45deg, #773697, #af7ac5);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.heroTitle {
+  font-size: 2.5em;
+  margin: 0;
+  font-weight: bold;
+}
+
+.heroSubtitle {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.contentSection {
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 1.8em;
+  border-bottom: 2px solid #773697;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  color: #773697;
+}
+
+.text {
+  margin: 20px 0;
+}
+
+.subTitle {
+  font-size: 1.5em;
+  color: #af7ac5;
+}
+
+.contentList {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.listItem {
+  background: #f1f1f1;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-left: 5px solid #773697;
+  font-weight: 500;
+}
+
+.policySection {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+
+/* Apply Bitter font globally */
+h1, h2, h3, h4, h5, p, li {
+  @apply font-bitter;
 }
 
 * {

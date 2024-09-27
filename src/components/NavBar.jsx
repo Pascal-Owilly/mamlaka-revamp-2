@@ -16,8 +16,8 @@ const Navbar = () => {
         {navLinks.map((nav, index) => (
           <li
             key={nav.title}
-            className={`font-poppins font-bold cursor-pointer text-[20px] ${
-              active === nav.title ? "#222b5b" : "text-dark"
+            className={`font-bitter cursor-pointer text-[16px] ${
+              active === nav.title ? "#222b5b" : "#222b5b"
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >
@@ -26,7 +26,7 @@ const Navbar = () => {
               className="relative hover:underline hover:underline-offset-6 hover:text-[#852890] transition-all duration-300"
             >
               {nav.title}
-            </a> {/* Use nav.url for linking to pages */}
+            </a> 
           </li>
         ))}
       </ul>
@@ -49,8 +49,8 @@ const Navbar = () => {
             {navLinks.map((nav, index) => (
               <li
                 key={nav.title}
-                className={`font-poppins font-bold cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-white" : "text-dimWhite"
+                className={`font-bitter font-bold cursor-pointer text-[16px] ${
+                  active === nav.title ? "#222b5b" : "#222b5b"
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
               >

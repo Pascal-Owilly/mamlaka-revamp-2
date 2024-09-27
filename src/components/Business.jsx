@@ -1,39 +1,43 @@
 import { features } from "../constants";
-import styles, { layout } from "../style";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import Button from "./Button";
 
-const FeatureCard = ({ icon, title, content, index }) => (
-  <div className="flex flex-col p-6 rounded-[20px] feature-card">
-    <div className="flex-1 flex flex-col mt-3">
-      <div className="flex items-center space-x-3"> {/* Flexbox container for icon and title */}
-        {/* <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}>
-          <img src={icon} alt={title} className="w-[50%] h-[50%]" /> 
-        </div> */}
-        <h4 className="font-poppins font-semibold text-[18px] leading-[23.4px]"
-            style={{ fontWeight: '800', letterSpacing: '2px' }}>
-          {title}
-        </h4>
+const FeatureCard = ({ icon, title, content }) => (
+  <div className="col-md-4"> {/* Bootstrap column for each card */}
+    <div
+      className="card mb-4" // Bootstrap card class with margin-bottom for spacing
+      style={{
+        backgroundColor: "#f0f0f0",
+        height: "230px",
+        padding: "20px",
+      }}
+    >
+      <div className="card-body d-flex flex-column justify-content-between">
+        {/* Card Content */}
+        <div className="d-flex align-items-center mb-2">
+          {/* Uncomment if you want to show the icon */}
+          {/* <img src={icon} alt={title} className="icon-style" style={{ marginRight: '10px' }} /> */}
+          <h5 className="card-title font-weight-bold">{title}</h5>
+        </div>
+        <p className="card-text">{content}</p>
       </div>
-      <p className="font-poppins font-normal text-[16px] leading-[24px] mt-2">
-        {content}
-      </p>
     </div>
   </div>
 );
 
 const Business = () => (
-  <section id="features" className={layout.section}>
-    <div className={layout.sectionInfo}>
-      <h2 className={styles.heading2} style={{ textAlign: 'center' }}>
-        The MHS Difference 
-      </h2>
-    </div>
-    <div className={`${layout.sectionImg} grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6`}>
-      {features.map((feature, index) => (
-        <FeatureCard key={feature.id} {...feature} index={index} />
-      ))}
-    </div>
-  </section>
+  <div className="container mt-5"> {/* Bootstrap container for centering */}
+    <section id="features">
+      <div className="text-left mb-4">
+        <h1 className="display-4">The MHS Difference</h1> {/* Bootstrap heading */}
+      </div>
+      <div className="row"> {/* Bootstrap row to hold the columns */}
+        {features.map((feature) => (
+          <FeatureCard key={feature.id} {...feature} />
+        ))}
+      </div>
+    </section>
+  </div>
 );
 
 export default Business;

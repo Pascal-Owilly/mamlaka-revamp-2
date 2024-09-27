@@ -22,7 +22,7 @@ const AboutUs = () => {
 
       {/* Corporate Culture Section */}
       <section className="corporate-culture p-10 bg-gray-100 text-center">
-        <h2 className={`${styles.heading2} text-gray-800`}>CORPORATE CULTURE</h2>
+        <h2 className={`${styles.heading2} font-bitter text-gray-800`}>CORPORATE CULTURE</h2>
         <div className="mt-4">
           <h3 className="font-semibold text-xl">OUR MISSION</h3>
           <p className="mt-2 max-w-3xl mx-auto">

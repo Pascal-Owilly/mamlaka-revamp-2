@@ -143,7 +143,7 @@ export const footerLinks = [
       // },
       {
         name: "FAQs",
-        link: "/faq",
+        link: "/faqs",
       },
     ],
   },

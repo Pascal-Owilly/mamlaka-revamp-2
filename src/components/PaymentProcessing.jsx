@@ -112,8 +112,9 @@ const CardDeal = () => (
       <div className="col-12 col-md-7 d-flex justify-content-center align-items-center">
         <div className="card p-4" style={{ backgroundColor: '#ccc', borderRadius: '10px' }}>
           <div className="card-body text-center">
-            <h3 className={styles.heading2}>Payment Processing</h3>
-            <p className="mt-3">
+          <h1 className="flex-1 font-bitter font-semibold ss:text-[48px] text-[30px] ss:leading-[100.8px] leading-[48px]">
+          Payment Processing</h1>
+            <p className="mt-3 font-bitter">
               MHS offers secure payment processing with credit cards, mobile money, and bank transfers, <br />
               ensuring smooth PCI DSS/GDPR compliant transactions with real-time tracking.
             </p>

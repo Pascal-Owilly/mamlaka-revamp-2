@@ -13,13 +13,14 @@ const onboardingSteps = [
 ];
 
 const CardDeal = () => (
-  <div className="card jumbotron my-5" style={{ background: '#402a6f', color: 'white', padding: '10px', borderRadius: '10px', margin: '20px' }}>
+  <div className="card jumbotron my-5 font-bitter" style={{ background: '#402a6f', color: 'white', padding: '10px', borderRadius: '10px', margin: '20px' }}>
     <div className="row">
       {/* Onboarding Title Section */}
       <div className="col-12 col-md-5 d-flex justify-content-center align-items-center">
         <div className="card p-4" style={{ background: '#6a2b89', borderRadius: '10px', padding:'30px' }}>
           <div className="card-body text-center">
-            <h3 style={{color:'white'}} className={styles.heading2}>Onboarding Process</h3>
+          <h1 className=" font-bitter font-semibold text-white ss:text-[48px] text-[30px] ss:leading-[100.8px] leading-[48px]">
+          Onboarding Process</h1>
           </div>
         </div>
       </div>

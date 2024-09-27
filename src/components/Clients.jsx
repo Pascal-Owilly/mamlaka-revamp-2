@@ -10,20 +10,20 @@ import { Pagination, Navigation } from 'swiper/modules';
 const Clients = () => (
   <section className="my-4">
     {/* Bootstrap container to wrap everything */}
-    <div className="container">
+    <div className="container-fluid">
       <div className={`${styles.flexCenter} flex-col text-center`}>
-        <h2 className={styles.heading2}>
-          Trusted By Leading Businesses <br className="sm:block hidden" /> World Wide
-        </h2>
+      <h1 className="flex-1 font-bitter mt-5 mb-5 font-semibold ss:text-[24px] text-[30px] ss:leading-[24.8px] leading-[24px]">
+      Trusted By Leading Businesses  World Wide
+        </h1>
       </div>
       <br />
       <div className={`${styles.flexCenter}`}>
         <Swiper
-          slidesPerView={4} // Show 4 logos at a time
-          spaceBetween={30} // Space between logos
+          slidesPerView={6} // Show 4 logos at a time
+          spaceBetween={10} // Space between logos
           pagination={{ clickable: true }}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          modules={[Pagination, Navigation]}  
           loop={true} // Infinite loop
           className="w-full"
         >

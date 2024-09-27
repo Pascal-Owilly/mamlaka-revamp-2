@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from "../style";
 
 const CardDeal = () => (
-  <div className="container my-5" style={{ padding: '10px' }}>
+  <div className="container-fluid my-5 mt-5" style={{ padding: '10px' }}>
 
     <div className="row">
       {/* Description Section */}
@@ -18,12 +18,13 @@ const CardDeal = () => (
             maxWidth: '' // Optional: limit max width for better layout
           }}
         >
- <h2 className={`${styles.heading2} text-white`}>
-  Tap into our embedded trade payment options
-</h2>
+      <h1 className="flex-1 font-bitter font-semibold ss:text-[24px] text-[30px] ss:leading-[100.8px] leading-[48px]">
+      Tap into our embedded trade <br />
+      payment options
+      </h1>
 
 <p
-  className="mt-2 font-bold text-lg text-white p-2 rounded shadow-md"
+  className="mt-2 font-bold text-lg font-bitter text-white p-2 rounded shadow-md"
   style={{ backgroundColor: "#852890" }}
 >
   MoMo & Cards Channel

@@ -6,14 +6,15 @@ import styles, { layout } from "../style";
 const Billing = () => (
   <>
     {/* Section 1: Carousel of Payment Plugins */}
+    <div className="container-fluid"></div>
     <section id="product" className={`${layout.sectionReverse} py-5`}>
-      <Container>
+      <Container fluid>
         <Row className="align-items-center">
           {/* Carousel Column */}
           <Col md={6}>
-            <h2 className={styles.heading2}>
+      <h1 className="flex-1 font-bitter font-semibold ss:text-[24px] text-[30px] ss:leading-[100.8px] leading-[48px]">
               Available Payment Plugins
-            </h2>
+            </h1>
             <Carousel indicators={false} controls={true}>
               {/* Create multiple slides, each containing 6 placeholders */}
               {[...Array(3)].map((_, slideIndex) => (
@@ -38,7 +39,7 @@ const Billing = () => (
 
           {/* Map Column */}
           <Col md={6} className="text-center">
-            <p className='text-dark text-muted'
+            <p className='text-dark text-muted font-bitter'
             
             >
               Available in Different Currencies
